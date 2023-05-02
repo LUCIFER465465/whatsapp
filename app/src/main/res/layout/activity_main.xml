@@ -10,8 +10,6 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-
-
         android:background="#065F56">
 
         <TextView
@@ -32,5 +30,11 @@
         android:layout_height="wrap_content"
         app:tabTextColor="#FFFFFF"
         android:background="#065F56"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vipager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 </LinearLayout>

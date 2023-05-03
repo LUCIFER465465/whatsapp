@@ -1,21 +1,28 @@
 package com.example.whatsapp
 
-import android.os.Parcel
-import android.os.Parcelable
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import java.lang.reflect.Array
 
-class FragPageAdapter(fm: FragmentManager,fragments:Array<Fragment>,item: Array<String>) : FragmentPagerAdapter(fm) {
+class FragPageAdapter(fm: FragmentManager, fragment: kotlin.Array<Fragment>, item: kotlin.Array<String>) : FragmentPagerAdapter(fm) {
 
+    var item  = item
+    var fragment = fragment
     override fun getCount(): Int {
-        TODO("Not yet implemented")
+        return fragment.size
+
     }
 
     override fun getItem(position: Int): Fragment {
-        TODO("Not yet implemented")
+        return fragment.get(position)
+
+    }
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        return item.get(position)
     }
 
 }
+
+
 
